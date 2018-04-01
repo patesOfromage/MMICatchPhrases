@@ -1,0 +1,27 @@
+<%= form_with(model: disquette, local: true) do |form| %>
+  <% if disquette.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(disquette.errors.count, "error") %> prohibited this disquette from being saved:</h2>
+
+      <ul>
+      <% disquette.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user_name %>
+    <%= form.text_field :user_name, id: :disquette_user_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :disquette %>
+    <%= form.text_field :disquette, id: :disquette_disquette %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

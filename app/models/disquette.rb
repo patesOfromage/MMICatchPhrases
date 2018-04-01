@@ -1,0 +1,2 @@
+class Disquette < ApplicationRecord
+end

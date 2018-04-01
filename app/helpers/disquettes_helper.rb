@@ -1,0 +1,2 @@
+module DisquettesHelper
+end

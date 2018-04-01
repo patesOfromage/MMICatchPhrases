@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User name:</strong>
+  <%= @disquette.user_name %>
+</p>
+
+<p>
+  <strong>Disquette:</strong>
+  <%= @disquette.disquette %>
+</p>
+
+<%= link_to 'Edit', edit_disquette_path(@disquette) %> |
+<%= link_to 'Back', disquettes_path %>

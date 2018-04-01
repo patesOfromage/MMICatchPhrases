@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :disquettes
 root to:'pages#home' 
 
   get 'pages/home'

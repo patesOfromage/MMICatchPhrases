@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Disquettes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User name</th>
+      <th>Disquette</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @disquettes.each do |disquette| %>
+      <tr>
+        <td><%= disquette.user_name %></td>
+        <td><%= disquette.disquette %></td>
+        <td><%= link_to 'Show', disquette %></td>
+        <td><%= link_to 'Edit', edit_disquette_path(disquette) %></td>
+        <td><%= link_to 'Destroy', disquette, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Disquette', new_disquette_path %>
