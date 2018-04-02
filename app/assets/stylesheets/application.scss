@@ -16,3 +16,34 @@
 	background-color: blue;
 }
 */
+
+html, body {
+	height: 100%;
+	margin: 0; padding: 0;
+}
+body {
+	display : table;
+	width: 100%;
+	margin-right: 20px;
+}
+footer {
+	display : table-row;
+	height: 20px; 
+	background-color :#262928;
+	}
+h1
+{
+text-align: center;
+margin-top: 0px;
+margin-bottom: 40px;
+}
+.text-uppercase{
+	color: white;
+}
+
+.col-md-6 {
+	color: white;
+}
+.footer-copyright {
+	color: white;
+}
