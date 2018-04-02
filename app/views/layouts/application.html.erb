@@ -46,49 +46,59 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet"> 
+     <link href="https://fonts.googleapis.com/css?family=Yatra+One" rel="stylesheet"> 
   </head>
 
   <body>
+  	
+  <div class="navbar-wagon">
+  <!-- Logo -->
+  <a href="" class="navbar-wagon-brand">
+    <%= image_tag "https://cdn-images-1.medium.com/max/1600/1*fIjRtO5P8zc3pjs0E5hYkw.png" %>
+  </a>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="">MMI CATCH PHRASES</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="/pages/home">Home</a></li>
-            <li><a href="/disquettes">Disquettes</a></li>
-            <li><a href="/pages/about">About</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
+  <!-- Right Navigation -->
+  <div class="navbar-wagon-right hidden-xs hidden-sm">
+
+    <a href="/pages/home" class="navbar-wagon-item navbar-wagon-link">Home</a>
+    <a href="/disquettes" class="navbar-wagon-item navbar-wagon-link">Disquettes</a>
+    <a href="/pages/about" class="navbar-wagon-item navbar-wagon-link">About</a>
+
+    <!-- Profile picture with dropdown list -->
+    <div class="navbar-wagon-item">
+      <div class="dropdown">
+      	<%= image_tag "" %> 
+        <img  class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
+        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+          <li><a href="/pages/home">Home</a></li>
+          <li><a href="/diquettes">Disquettes</a></li>
+          <li><a href="/pages/about">About</a></li>
+        </ul>
       </div>
-    </nav>
-    <br>
-    <br>
-    <br>
-    <br>
+    </div>
+  </div>
 
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-
-
-
+  <!-- Dropdown appearing on mobile only -->
+  <div class="navbar-wagon-item hidden-md hidden-lg">
+    <div class="dropdown">
+      <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
+      <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+        <li><a href="/pages/home">Home</a></li>
+        <li><a href="/disquettes">Disquettes</a></li>
+        <li><a href="/pages/about">About</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<br>
+<br>
 
     <%= yield %>
+
+
 
 
 <!--Footer-->
